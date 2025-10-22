@@ -1,0 +1,63 @@
+p{
+    text-align: center;
+}
+
+table{
+    table-layout: fixed;
+    width: 300px;
+    height: 300px;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+td{
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    word-wrap: break-word;
+    white-space: normal;  
+}
+
+th{
+    border: 1px solid black;
+    width: 100px;
+    height: 50px;
+}
+
+.fent{
+    vertical-align: top;
+}
+
+.lent{
+    vertical-align: bottom;
+}
+
+.block{
+    display: block;
+}
+
+.justify{
+    text-align: justify;
+}
+
+.red{
+    background-color: red;
+}
+
+.gray{
+    background-color: gray;
+}
+
+.yellow{
+    background-color: yellow;
+}
+.lyellow{
+    background-color: lightyellow;
+}
+
+.scroll{
+    overflow-y: auto;
+    overflow-x: scroll;
+}
+

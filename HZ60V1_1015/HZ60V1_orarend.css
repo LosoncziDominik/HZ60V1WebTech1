@@ -1,0 +1,36 @@
+p{
+    text-align: center;
+}
+
+table{
+    table-layout: fixed;
+    width: 1000px;
+    height: 700px;
+    background-color: lightgray;
+    margin: 0 auto;
+}
+
+td{
+    border: 1px solid black;
+    width: 200px;
+    height: 100px;
+}
+
+th{
+    border: 1px solid black;
+    width: 200px;
+    height: 100px;
+    background-color: gray;
+}
+td:first-child{
+    background-color: gray;
+    text-align: center;
+}
+
+.elm{
+    background-color: green;
+}
+
+.gyak{
+    background-color: red;
+}
