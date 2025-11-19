@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Órarend JSON beolvasással</title>
+</head>
+<body>
+
+    <h1>HZ60V1 órarend – JSON beolvasása</h1>
+
+    <button onclick="betolt()">Órarend betöltése</button>
+
+    <div id="orarend"></div>
+
+    <script>
+        function betolt() {
+            fetch("orarendHZ60V1.json")
+                .then(response => response.json())
+                .then(data => {
+                    const div = document.getElementById("orarend");
+                    div.innerHTML = "";
+
+                    const orak = data.HZ60V1_orarend.ora;
+
+                    for (let i = 0; i < orak.length; i++) {
+                        const ora = orak[i];
+
+                        const p = document.createElement("p");
+                        p.innerHTML = `
+                            <strong>${ora.targy}</strong><br>
+                            Időpont: ${ora.idopont.nap} ${ora.idopont.tol}-${ora.idopont.ig}<br>
+                            Helyszín: ${ora.helyszin}<br>
+                            Oktató: ${ora.oktato}<br>
+                            Szak: ${ora.szak}<br><br>
+                        `;
+                        div.appendChild(p);
+                    }
+                })
+                .catch(err => {
+                    console.error("Hiba a JSON beolvasásakor:", err);
+                });
+        }
+    </script>
+
+</body>
+</html>

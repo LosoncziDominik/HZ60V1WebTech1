@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autók JSON</title>
+</head>
+<body>
+    <h1>Tömbökön belüli tömbök ciklusa</h1>
+
+    <div id="jsonHZ60V1"></div>
+
+    <script>
+        const LDObj = {
+            "name": "Losonczi Dominik",
+            "age": 24,
+            "cars": [
+                {"name": "Toyota", "models": ["CHR", "Corolla", "Proace"]},
+                {"name": "Ford", "models": ["Kuga", "Mondeo", "Mustang"]},
+                {"name": "BMW", "models": ["320", "X3", "XS"]},
+                {"name": "Fiat", "models": ["500", "Panda", "Tipo"]}
+            ]
+        };
+
+        const jsonDiv = document.getElementById('jsonHZ60V1');
+
+        const h2 = document.createElement('h2');
+        h2.textContent = "Autók és modelljeik:";
+        jsonDiv.appendChild(h2);
+
+        for (let i = 0; i < LDObj.cars.length; i++) {
+
+            const p = document.createElement('p');
+            p.innerHTML = `<strong>${LDObj.cars[i].name}</strong>`;
+            jsonDiv.appendChild(p);
+
+            const ul = document.createElement('ul');
+            
+            for (let j = 0; j < LDObj.cars[i].models.length; j++) {
+                const li = document.createElement('li');
+                li.textContent = LDObj.cars[i].models[j];
+                ul.appendChild(li);
+            }
+
+            jsonDiv.appendChild(ul);
+        }
+    </script>
+</body>
+</html>

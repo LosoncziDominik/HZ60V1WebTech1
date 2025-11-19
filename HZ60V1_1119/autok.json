@@ -1,0 +1,12 @@
+{
+    "XYObj": {
+    "name" : "LD",
+    "age": 22,
+    "cars": [
+                {"name": "Toyota", "models": ["CHR", "Corolla", "Proace"]},
+                {"name": "Ford", "models": ["Kuga", "Mondeo", "Mustang"]},
+                {"name": "BMW", "models": ["320", "X3", "XS"]},
+                {"name": "Fiat", "models": ["500", "Panda", "Tipo"]}
+            ]
+}
+}
