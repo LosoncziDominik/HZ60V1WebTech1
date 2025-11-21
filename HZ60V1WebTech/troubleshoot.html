@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kezdő_hibák</title>
+    <link rel="stylesheet" href="text.css">
+    <link rel="stylesheet" href="videoStyle.css">
+    <script src="https://unpkg.com/lucide@0.470.0/dist/umd/lucide.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body class="light">
+    <header>
+        <nav class="navbar">
+            
+            <a href="weblap.html"><h1 class="logo"><img class="icon" src="assets/file-box.png"> 3D nyomtatás</h1></a>
+            <!-- A többi html oldal-->
+            <ul class="nav-links">
+                <li><a href="weblap.html">Kezdőlap</a></li>
+                <li><a href="filament.html">Filamentek</a></li>
+                <li><a href="troubleshoot.html">Kezdő hibák</a></li>
+                <li><a href="usage.html">Valós felhasználás</a></li>
+                <li><a href="models.html">Modellek</a></li>
+            </ul>
+
+            <button id="themeToggle">Váltás sötét / világos módra</button>
+        </nav>
+    </header>
+
+    <!-- Tartalom -->
+    <div class="container">
+        <!-- Sidebar az oldalon való könnyebb mozgáshoz-->
+        <aside class="lGray">
+                <ul>
+                    <li><a href="#Nyomtato_hibas_szintezese">Nyomtató hibás szintezése</a></li>
+                    <li><a href="#Filament_tarolas">Filament tárolás</a></li>
+                    <li><a href="#Tamasz_elem">Támasz elem</a></li>
+                    <li><a href="#Retegzett_nyomtatas">Rétegzett nyomtatás</a></li>
+                </ul>
+        </aside>
+        
+        <main>
+            <!--Szövegek-->
+            <section id="Nyomtato_hibas_szintezese" class="Nyomtato_hibas_szintezese">
+                <h2>Nyomtató hibás szintezése</h2>
+                <p>A szintezés a legfontosabb része a 3D nyomtatásnak, amit a fűtőlap alján lévő tekerőkkel lehet beállítani. Ha ez nincs helyesen beállítva, akkor a nyomtatáson kifejezetten meglátszik. Két féle probléma léphet elő ebben a helyzetben, az első az amikor túl közel van a nyomtatófej a fűtőlaphoz, ilyenkor túlságosan összenyomódik a filament és egy "u" alakot vesz fel egy egyenes csík helyett. A másik eshetőség, ha túl messze van a fej a laptól, ekkor nem nyomódik le eléggé a műanyag és vagy "o" alakot vesz fel vagy nem is tapad rá a lapra.</p>
+                <img src="assets/layerheight.png" class="img">
+                <h3>Megoldás:</h3>
+                <p>A megoldás a nyomtató pontos szintezése, amit vagy megcsinál a nyomtató maga, amennyiben van ilyen funkciója, vagy pedig nekünk kell manuálisan elvégezni ennek a megvalósításához az alábbi linken találhat segítséget.</p>
+                <video src="assets/3D_nyomtato_leveling.mp4" id="video" width="600" controls></video>
+                <div class="grid">
+                    <div>
+                        <button id="start"><i data-lucide="play"></i></button>
+                        <button id="stop"><i data-lucide="pause"></i></button>
+                        <button id="startstop"><i data-lucide="square"></i></button>
+                    </div>
+                    <div>
+                        <button id="decrease"><i data-lucide="volume-1"></i></button>
+                        <button id="increase"><i data-lucide="volume-2"></i></button>
+                        <button id="mute"><i data-lucide="volume-off"></i></button>
+                    </div>
+                    <div>
+                        <button id="small"><i data-lucide="minimize-2"></i></button>
+                        <button id="medium"><i data-lucide="maximize"></i></button>
+                        <button id="large"><i data-lucide="maximize-2"></i></button>
+                    </div>
+                </div>
+            </section>
+            <section id="Filament_tarolas" class="Filament_tarolas">    
+                <h2>Filament tárolás</h2>
+                <p>A filament a helytelen tárolása számtalan problémát hordoz magában. A legfontosabb dolog az, hogy vákumosan elzárt, naptól védett helyen tároljuk a filamentet. Ha ezt nem tesszük és például napos helyen tároljuk, akkor az UV sugárzástól sérül a műanyag szerkezete és emiatt törékennyé válik. Ha nem rakjuk lezárt tárolóba, akkor a párát tudja magába szívni az anyag, amitől sokkal kevésbé fog tapadni a fűtőlaphoz. Nagy probléma lehet a por is, mivel ha felhalmozódik a filamenten, akkor ez is képes gátolni a tapadást.</p>
+                <h3>Megoldást:</h3>
+                <p>Vákummentes zacskóban fénytől elzárva kell tárolni, ha huzamosabb ideig nem tervezzük használni.</p>
+            </section>
+            <section id="Tamasz_elem" class="Tamasz_elem">
+                <h2>Támasz elem</h2>
+                <p>Gyakran probléma a 3D nyomtatás során, hogy egy hézagot kell áthidalni. Erre a legtöbb műanyag nem elég merev, ezért támasz elemet kell készíteni. Hasonló probléma fordul elő a 45° fölötti emelkedőnél. Ha elképzel egy fejjel lefelé álló piramist, a nyomtatónak minden egyes új külső sort a levegőre kell nyomtatnia, ez aránylag megoldható, mivel a mellette lévő még megfogja, azonban ha több ilyen sor kerül nyomtatásra, akkor minden egyes sorral szignifikánsan nő annak az esélye, hogy nem tapad semmihez, és ez egy láncreakciót okoz, mivel ha erre a nem létező részre szeretne még többször nyomtatni, az szintén nem lesz sikeres nyomtatva.</p>
+                <img src="assets/angle_printing.png" class="img">
+                <h3>Megoldás:</h3>
+                <p>A legtöbb slicer program képes automatikusan támasztó elemet készíteni, ha bepipáljuk generáláskor.</p>
+                <img src="assets/support.jpg" class="img">
+            </section>
+            <section id="Retegzett_nyomtatas" class="Retegzett_nyomtatas">
+                <h2>Rétegzett nyomtatás</h2>
+                <p>Ha túlságosan rétegzettek a sorok a nyomtatás után, akkor nagy valószínűleg a rétegmagasság okozhatja a problémát. Ha ezt túl magasra hagyjuk, akkor gyakran nem képes elég részletesen nyomtatni az adott tárgyat.</p>
+                <h3>Megoldás:</h3>
+                <p>A slicer beállításaiban ezt is meg lehet találni, az általános magasság 0.2 mm, viszont a legtöbb képes még 0.12 mm, de még 0.05 mm magasságú szintet is képes nyomtatni.</p>
+                <img src="assets/biglayerheight.png" class="img">
+            </section>
+        </main>
+
+        
+    </div>
+
+    <!-- Lábléc -->
+    <footer>
+        <p>© 2025 Minden jog fenntartva | Készítette: Losonczi Dominik HZ60V1</p>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">Vissza a tetejére</button>
+
+    <!-- Scriptek -->
+    <script>
+        lucide.createIcons();
+
+        let btnClick = (id, onclick) => document.getElementById(id).addEventListener("click", onclick);
+
+        let video = document.querySelector("video");
+
+        btnClick("start",   () => video.play());
+        btnClick("stop",   () => video.pause());
+        btnClick("startstop", () => video.paused ? video.play() : video.pause());
+        btnClick("mute", () => { video.muted = true });
+        btnClick("increase", () => { video.muted = false; video.volume += 0.2; });
+        btnClick("decrease", () => { video.muted = false; video.volume -= 0.2; });
+        btnClick("small", () => {video.width = 360});
+        btnClick("medium", () => {video.width = 600});
+        btnClick("large", () => {video.width = 900});
+
+    </script>
+
+
+    <script>
+        $(document).ready(function() {
+
+            if (localStorage.getItem("themeBody") === "dark") {
+                $("body").addClass("dark");
+            } else {
+                $("body").addClass("light");
+            }
+            if (localStorage.getItem("themeAside") === "dGray") {
+                $("aside").addClass("dGray");
+            } else {
+                $("aside").addClass("lGray");
+            }
+            if (localStorage.getItem("themeA") === "dGray") {
+                $("aside a").addClass("dGray");
+            } else {
+                $("aside a").addClass("lGray");
+            }
+
+        
+            $("#themeToggle").click(function() {
+            $("body").toggleClass("dark");
+            $("body").toggleClass("light");
+            $("aside a").toggleClass("dGray");
+            $("aside a").toggleClass("lGray");
+            $("aside").toggleClass("dGray");
+            $("aside").toggleClass("lGray");
+
+            if ($("body").hasClass("dark")) {
+                localStorage.setItem("themeBody", "dark");
+            } else {
+                localStorage.setItem("themeBody", "light");
+            }
+            if ($("aside").hasClass("dGray")) {
+                localStorage.setItem("themeAside", "dGray");
+            } else {
+                localStorage.setItem("themeAside", "lGray");
+            }
+            if ($("aside a").hasClass("dGray")) {
+                localStorage.setItem("themeA", "dGray");
+            } else {
+                localStorage.setItem("themeA", "lGray");
+            }
+
+
+        });
+    });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+
+            $(window).on("scroll", function () {
+                if ($(this).scrollTop() > 200) {
+                    $("#backToTop").fadeIn();
+                } else {
+                    $("#backToTop").fadeOut();
+                }
+            });
+
+            $("#backToTop").on("click", function () {
+                $("html, body").animate({ scrollTop: 0 }, 500);
+                return false;
+            });
+
+        });
+    </script>
+
+</body>
+</html>

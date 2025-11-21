@@ -1,0 +1,60 @@
+{
+    "filamentek": [
+        {
+            "tipus": "PLA",
+            "ho": "190-210°C",
+            "elony": "Könnyű nyomtatni, környezetbarát, jó részletesség",
+            "hatrany": "Alacsony hőállóság, törékeny",
+            "ar": "~10.000 ft / kg"
+        },
+        {
+            "tipus": "ABS",
+            "ho": "230-250°C",
+            "elony": "Erős, tartós, hőálló",
+            "hatrany": "Sok gőz, warping, fűtött kamra ajánlott",
+            "ar": "'15.000 ft / kg"
+        },
+        {
+            "tipus": "PETG",
+            "ho": "220-240°C",
+            "elony": "Erős, rugalmas, jó tapadás, tartós",
+            "hatrany": "Stringing, lassabb nyomtatás",
+            "ar": "~13.000 ft / kg"
+        },
+        {
+            "tipus": "TPU",
+            "ho": "220-240°C",
+            "elony": "Rugalmas, hajlékony, ütésálló",
+            "hatrany": "Nehéz nyomtatni, lassú sebesség kell",
+            "ar": "~15.000 ft / kg"
+        },
+        {
+            "tipus": "Nylon",
+            "ho": "240-260°C",
+            "elony": "Nagyon erős, kopásálló, tartós",
+            "hatrany": "Nehéz nyomtatni, magas hő, nedvszívó",
+            "ar": "20.000 ft / kg"
+        },
+        {
+            "tipus": "Carbon Fiber PLA",
+            "ho": "200-220°C",
+            "elony": "Könnyű, merev, alacsony vetemedés",
+            "hatrany": "Koptatja a nozzle-t, edzett acél fej ajánlott",
+            "ar": "~40.000 ft / kg"
+        },
+        {
+            "tipus": "Metalic PLA",
+            "ho": "170-190°C",
+            "elony": "csiszolás után nem lehet megkülönböztetni az igazi fémtől, mágneses",
+            "hatrany": "Koptatja a nozzle-t, hatásán kívül nem örököl semilyen tulajdonságot",
+            "ar": "~15.000 ft / kg"
+        },
+        {
+            "tipus": "Wood PLA",
+            "ho": "160-180°C",
+            "elony": "vágható, csiszolható, sok típusban elérhető",
+            "hatrany": "fa tartalma miatt megéghet, nem tűri az időjárás viszonyokat",
+            "ar": "~15.000 ft / kg"
+        }
+    ]
+}

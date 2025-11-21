@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filamentek</title>
+    <link rel="stylesheet" href="text.css">
+    <link rel="stylesheet" href="form.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body class="light">
+    <header>
+        <nav class="navbar">
+
+            <a href="weblap.html"><h1 class="logo"><img class="icon" src="assets/file-box.png">3D nyomtatás</h1></a>
+            <!-- A többi html oldal-->
+            <ul class="nav-links">
+                <li><a href="weblap.html">Kezdőlap</a></li>
+                <li><a href="filament.html">Filamentek</a></li>
+                <li><a href="troubleshoot.html">Kezdő hibák</a></li>
+                <li><a href="usage.html">Valós felhasználás</a></li>
+                <li><a href="models.html">Modellek</a></li>
+            </ul>
+
+            <button id="themeToggle">Váltás sötét / világos módra</button>
+        </nav>
+        
+        <section id="home" class="hero">
+                <h2>Üdvözöllek a weboldalamon!</h2>
+        </section>
+        
+    </header>
+
+    <!-- Tartalom -->
+    <div class="container">
+        <!-- Sidebar az oldalon való könnyebb mozgáshoz-->
+        <aside class="lGray">
+                <ul>
+                    <li><a href="#about">Rólam</a></li>
+                    <li><a href="#printing">3D nyomtatás</a></li>
+                    <li><a href="#contact">Űrlap</a></li>
+                </ul>
+        </aside>
+        
+        <main>
+            <!--Szövegek-->
+            <section id="about" class="about">
+                <h2>Rólam</h2>
+                <p>Egy 5. féléves hallgató vagyok a Miskolci Egyetem programtervező informatikus szakán. A programozás mellett az egyik hobbim a 3D nyomtatás és ezt az oldalt ennek a hobbinak a bemutatásra akarom szentelni.</p>
+            </section>
+
+            <section id="printing" class="printing">
+                <h2>3D nyomtatás</h2>
+                <p>De mi is az a 3D nyomtató? A 3D nyomtató, alapvetően egy fűtőlapból, egy nyomtató fejből, egy keretből, amin 2 irányba (+1 a fűtőlap mozgása) gurulhat a nyomtató fej, valamint egy külső perifériából, amin utasításokat adhatunk a nyomtatónak</p>
+                <p style="text-align:center;"><img src="assets/3d_nyomtato.png" class="img"></p>
+                <h3>Hogyan működik a nyomatás?</h3>
+                <p>
+                    <dl>
+                        <dt>1. Előkészületek:</dt>
+                        <dd>Első lépésként a nyomtató felkészül a nyomtatásra, felmelegíti a fűtőlapot és a nyomtató fejet, az adott filament alapértelmezett olvadási hőfokára.</dd> 
+                        <dt>2. Tesztelés</dt>
+                        <dd>Ha elérte a kívánt hőfokot, akkor a nyomtató az alapértelmezett "home" pozícióra navigál (alapértelmezetten bal alsó sarok egy miliméterre a fűtőlaptól). Alapvetően a nyomtató nem tudja a térben pontosan merre van, ezért szükséges a "homeolás" minden nyomtatás elején, ilyenkor a nyomtatófej a keret sínjén elkezd haladni az oldala felé, ahol a szélén egy kapcsoló várja és ha benyomja a kapcsolóra, ez azt jelzi a fejnek, hogy az adott oldal széléhez ért. Amikor elért a "home" pozícióba akkor egy extrudálási teszt következik, amikoris a fűtőlapra nyomtat egy csík filamentet. Ennek az a feladata, hogy a megolvadt filament teljesen kitöltse a nyomtatófej csövét, ezzel egyenletes nyomtatást biztosítva.</dd>
+                        <dt>3. Nyomtatás</dt>
+                        <dd>Amikor a nyomtató elkérte a szükséges hőfokot, a fej a kezdő pozíción van és a filament rendesen kitölti a fej csövét, akkor kezdődhet a nyomtatási folyamat. A nyomtató beolvassa az adatokat az STL fileból, és szintenként elkezd nyomtatni.<dd>
+                    </dl>
+                    <img src="assets/nyomtatas.gif" class="img">
+                </p>
+            </section>
+
+            <section id="contact" class="contact">
+                <h2>Tölts ki egy Űrlapot!</h2>
+                <form>
+
+                    <label for="nev">Név *</label>
+                    <input type="text" id="nev" name="nev" required minlength="2">
+                    <div class="error">Adj meg legalább 2 karaktert.</div>
+
+                    <label for="email">E-mail *</label>
+                    <input type="email" id="email" name="email" required>
+                    <div class="error">Adj meg érvényes e-mail címet.</div>
+
+                    <label for="jelszo">Jelszó *</label>
+                    <input type="password" id="jelszo" name="jelszo" required minlength="8">
+                    <div class="error">A jelszónak legalább 8 karakteresnek kell lennie.</div>
+
+                    <label>Nem *</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="nem" value="ferfi" required> Férfi</label>
+                        <label><input type="radio" name="nem" value="no"> Nő</label>
+                        <label><input type="radio" name="nem" value="egyeb"> Egyéb / nem szeretném megadni</label>
+                    </div>
+                    <div class="error">Válassz egy nemet.</div>
+
+                    <label for="kor">Életkor (14-99)</label>
+                    <input type="number" id="kor" name="kor" min="14" max="99">
+                    <div class="error">Csak 14 és 99 közötti szám engedélyezett.</div>
+
+                    <label for="datum">Születési dátum *</label>
+                    <input type="date" id="datum" name="datum" required>
+                    <div class="error">Válassz dátumot.</div>
+
+                    <label for="szin">Kedvenc szín</label>
+                    <input type="color" id="szin" name="szin">
+
+                    <label for="fajl">Fájl feltöltése</label>
+                    <input type="file" id="fajl" name="fajl" accept=".pdf,.jpg,.png">
+
+                    <label for="megjegyzes">Megjegyzés</label>
+                    <textarea id="megjegyzes" name="megjegyzes" rows="3"></textarea>
+
+                    <label for="valasztas">Kategória *</label>
+                    <select id="valasztas" name="valasztas" required>
+                        <option value="">- Válassz -</option>
+                        <option>Hallgató</option>
+                        <option>Oktató</option>
+                        <option>Vendég</option>
+                    </select>
+                    <div class="error">Válassz egy kategóriát.</div>
+
+                    <label>
+                        <input type="checkbox" required> Elfogadom a feltételeket *
+                    </label>
+                    <div class="error">A folytatáshoz el kell fogadni a feltételeket.</div>
+
+                    <button type="submit">Beküldés</button>
+                </form>
+            </section>
+        </main>
+
+        
+    </div>
+    
+    <!-- Lábléc -->
+    <footer>
+        <p>© 2025 Minden jog fenntartva | Készítette: Losonczi Dominik HZ60V1</p>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">Vissza a tetejére</button>
+
+    <!-- Scriptek -->
+    <script>
+        $(document).ready(function() {
+
+            if (localStorage.getItem("themeBody") === "dark") {
+                $("body").addClass("dark");
+            } else {
+                $("body").addClass("light");
+            }
+            if (localStorage.getItem("themeAside") === "dGray") {
+                $("aside").addClass("dGray");
+            } else {
+                $("aside").addClass("lGray");
+            }
+            if (localStorage.getItem("themeA") === "dGray") {
+                $("aside a").addClass("dGray");
+            } else {
+                $("aside a").addClass("lGray");
+            }
+
+        
+            $("#themeToggle").click(function() {
+            $("body").toggleClass("dark");
+            $("body").toggleClass("light");
+            $("aside a").toggleClass("dGray");
+            $("aside a").toggleClass("lGray");
+            $("aside").toggleClass("dGray");
+            $("aside").toggleClass("lGray");
+
+            if ($("body").hasClass("dark")) {
+                localStorage.setItem("themeBody", "dark");
+            } else {
+                localStorage.setItem("themeBody", "light");
+            }
+            if ($("aside").hasClass("dGray")) {
+                localStorage.setItem("themeAside", "dGray");
+            } else {
+                localStorage.setItem("themeAside", "lGray");
+            }
+            if ($("aside a").hasClass("dGray")) {
+                localStorage.setItem("themeA", "dGray");
+            } else {
+                localStorage.setItem("themeA", "lGray");
+            }
+
+
+            });
+        });
+    </script>
+    
+    <script>
+        $(document).ready(function () {
+
+            $(window).on("scroll", function () {
+                if ($(this).scrollTop() > 200) {
+                    $("#backToTop").fadeIn();
+                } else {
+                    $("#backToTop").fadeOut();
+                }
+            });
+
+            $("#backToTop").on("click", function () {
+                $("html, body").animate({ scrollTop: 0 }, 500);
+                return false;
+            });
+
+        });
+    </script>
+    
+
+</body>
+</html>

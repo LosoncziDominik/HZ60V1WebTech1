@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modellek</title>
+    <link rel="stylesheet" href="text.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body class="light">
+    <header>
+        <nav class="navbar">
+            
+            <a href="weblap.html"><h1 class="logo"><img class="icon" src="assets/file-box.png"> 3D nyomtatás</h1></a>
+            <!-- A többi html oldal-->
+            <ul class="nav-links">
+                <li><a href="weblap.html">Kezdőlap</a></li>
+                <li><a href="filament.html">Filamentek</a></li>
+                <li><a href="troubleshoot.html">Kezdő hibák</a></li>
+                <li><a href="usage.html">Valós felhasználás</a></li>
+                <li><a href="models.html">Modellek</a></li>
+            </ul>
+
+            <button id="themeToggle">Váltás sötét / világos módra</button>
+        </nav>
+    </header>
+
+    <!-- Tartalom -->
+    <div class="container">
+        <!-- Sidebar az oldalon való könnyebb mozgáshoz-->
+        <aside class="lGray">
+                <ul>
+                    <li><a href="#modellezo">Modellezők</a></li>
+                    <li><a href="#modell_talalas">Modell keresés</a></li>
+                    <li><a href="#szeletelo">Szeletelők</a></li>
+                </ul>
+        </aside>
+        
+        <main>
+            <!--Szövegek-->
+            <section id="modelezo" class="modelezo">
+                <h2>3D modellező programok</h2>
+                <p>A 3D nyomtatás egyik fontos része a 3D modellek elkészítése. Az alábbi programok segítségével egyszerűen tervezhetsz saját modelleket.</p>
+
+                <h3>Ingyenes programok</h3>
+                <ul>
+                    <li><strong>Tinkercad</strong> - kezdőknek ideális, böngészőben használható.</li>
+                    <li><strong>Blender</strong> - profi modellezés és animáció, teljesen ingyenes.</li>
+                    <li><strong>FreeCAD</strong> - mérnöki tervezéshez, paraméteres modellekhez.</li>
+                </ul>
+
+                <h3>Fizetős / Diák verziók</h3>
+                <ul>
+                    <li><strong>Fusion 360</strong> - diákoknak ingyenes, profi CAD rendszer.</li>
+                    <li><strong>Onshape</strong> - online CAD rendszer.</li>
+                </ul>
+            </section>
+
+            <section id="modell_talalas" class="modell_talalas">
+
+                <h2>Hol szerezhetsz 3D modelleket?</h2>
+                <p>Ha nem szeretnél saját modellt készíteni, rengeteg ingyenes és fizetős oldal kínál letölthető 3D modelleket.</p>
+
+                <ul>
+                    <li><strong>Thingiverse</strong> - a legnépszerűbb ingyenes gyűjtemény.</li>
+                    <li><strong>Printables</strong> - sok minőségi, tesztelt modell.</li>
+                    <li><strong>MyMiniFactory</strong> - figurák és dizájnmodellek.</li>
+                    <li><strong>Cults3D</strong> - fizetős modellek, profi tervezőktől.</li>
+                </ul>
+            </section>
+
+            <section id="szeletelo" class="szeletelo">
+                <h2>Szeletelő programok (Slicer)</h2>
+                <p>A modellek nyomtatáshoz való előkészítése a szeletelő programok feladata.</p>
+
+                <ul>
+                    <li><strong>Cura</strong> - könnyen kezelhető, széleskörű támogatás.</li>
+                    <li><strong>PrusaSlicer</strong> - fantasztikus automatikus támogatók.</li>
+                    <li><strong>Bambu Studio</strong> - villámgyors előnézet és kiváló támogatók.</li>
+                </ul>
+            </section>
+
+        </main>
+
+        
+    </div>
+
+    <!-- Lábléc -->
+    <footer>
+        <p>© 2025 Minden jog fenntartva | Készítette: Losonczi Dominik HZ60V1</p>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">Vissza a tetejére</button>
+
+    <!-- Scriptek -->
+    <script>
+        $(document).ready(function() {
+
+            if (localStorage.getItem("themeBody") === "dark") {
+                $("body").addClass("dark");
+            } else {
+                $("body").addClass("light");
+            }
+            if (localStorage.getItem("themeAside") === "dGray") {
+                $("aside").addClass("dGray");
+            } else {
+                $("aside").addClass("lGray");
+            }
+            if (localStorage.getItem("themeA") === "dGray") {
+                $("aside a").addClass("dGray");
+            } else {
+                $("aside a").addClass("lGray");
+            }
+
+        
+            $("#themeToggle").click(function() {
+            $("body").toggleClass("dark");
+            $("body").toggleClass("light");
+            $("aside a").toggleClass("dGray");
+            $("aside a").toggleClass("lGray");
+            $("aside").toggleClass("dGray");
+            $("aside").toggleClass("lGray");
+
+            if ($("body").hasClass("dark")) {
+                localStorage.setItem("themeBody", "dark");
+            } else {
+                localStorage.setItem("themeBody", "light");
+            }
+            if ($("aside").hasClass("dGray")) {
+                localStorage.setItem("themeAside", "dGray");
+            } else {
+                localStorage.setItem("themeAside", "lGray");
+            }
+            if ($("aside a").hasClass("dGray")) {
+                localStorage.setItem("themeA", "dGray");
+            } else {
+                localStorage.setItem("themeA", "lGray");
+            }
+
+
+        });
+    });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+
+            $(window).on("scroll", function () {
+                if ($(this).scrollTop() > 200) {
+                    $("#backToTop").fadeIn();
+                } else {
+                    $("#backToTop").fadeOut();
+                }
+            });
+
+            $("#backToTop").on("click", function () {
+                $("html, body").animate({ scrollTop: 0 }, 500);
+                return false;
+            });
+
+        });
+    </script>
+
+</body>
+</html>

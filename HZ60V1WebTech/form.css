@@ -1,0 +1,82 @@
+form {
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px darkgray;
+}
+
+h2 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: black;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+    border: 1px solid white;
+    border-radius: 4px;
+    font: inherit;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+input:invalid, select:invalid, textarea:invalid {
+    border-color: red;
+    background: white;
+}
+
+input:valid, select:valid, textarea:valid {
+    border-color: green;
+}
+
+.error {
+    display: none;
+    color: red;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+}
+
+input:invalid + .error,
+select:invalid + .error,
+textarea:invalid + .error {
+    display: block;
+}
+
+.radio-group {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.checkbox-group {
+  margin-top: 0.5rem;
+}
+
+form>button {
+    margin-top: 1.5rem;
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 4px;
+    background: #222;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+}
+
+form>button:hover {
+    background: #444;
+}

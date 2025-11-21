@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filamentek</title>
+    <link rel="stylesheet" href="text.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body class="light">
+    <header>
+        <nav class="navbar">
+            
+            <a href="weblap.html"><h1 class="logo"><img class="icon" src="assets/file-box.png">3D nyomtatás</h1></a>
+            <!-- A többi html oldal-->
+            <ul class="nav-links">
+                <li><a href="weblap.html">Kezdőlap</a></li>
+                <li><a href="filament.html">Filamentek</a></li>
+                <li><a href="troubleshoot.html">Kezdő hibák</a></li>
+                <li><a href="usage.html">Valós felhasználás</a></li>
+                <li><a href="models.html">Modellek</a></li>
+            </ul>
+
+            <button id="themeToggle">Váltás sötét / világos módra</button>
+        </nav>
+    </header>
+
+    <!-- Tartalom -->
+    <div class="container">
+        <!-- Sidebar az oldalon való könnyebb mozgáshoz-->
+        <aside class="lGray">
+                <ul>
+                    <li><a href="#filament">Filament</a></li>
+                    <li><a href="#pla">PLA</a></li>
+                    <li><a href="#abs">ABS</a></li>
+                    <li><a href="#petg">PET-G</a></li>
+                    <li><a href="#tpe">TPE</a></li>
+                    <li><a href="#nylon">Nylon</a></li>
+                    <li><a href="#plaw">Wood PLA</a></li>
+                    <li><a href="#plam">Metal PLA</a></li>
+                    <li><a href="#placf">Carbon Fiber PLA</a></li>
+                </ul>
+        </aside>
+        
+        <main>
+            <!--Szövegek-->
+            <section id="filament" class="filament">
+                <h2>Filament</h2>
+                <p>A filament a 3D nyomtatásnál az egy műanyag szál, amit a nyomtatófej megolvaszt, a fűtőtestre pedig rátapad. Ennek rengeteg fajtája, és fajtán belül típusa léteznek. Az átlag ember nem veszi észre, hogy minden nap hány különböző féle műanyaggal találkozik. Mindenki ismeri a PET vagy PETG műanyagot, mivel szinte mindenhol találkozhatunk palackokkal, de ha fogott már a kezébe lego-t, akkor találkozott az egyik legelterjedtebb műanyaggal az ABS-el amit tartóssága miatt használnak, </p>
+            </section>
+            <section>
+                <h2>Filament típusok</h2>
+            </section>
+
+            <table id="filamentTable">
+                <thead>
+                    <tr>
+                        <th>anyag neve</th>
+                        <th>olvadási hőmérséklet</th>
+                        <th>előny</th>
+                        <th>hátrány</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+                <section>
+                    <h2>Nyomtatási tippek</h2>
+                    <dl>
+                        <h3>Fizikai</h3>
+                        <dt>Szintezés</dt>
+                        <dd>A szintezés a 3D nyomtatás szíve lelke, bizonyos nyomtató típusoknak van automatizált szintezés beleépítve, azonban ez nem mindig a legpontosabb. A manuális beállításhoz van a fűtőlap alján 4 db csavaró a négy sarokban, egy vékony papírlapot kell a fűtőlapra helyezni, és lejjebb kell vinni a nyomtató fejet 0.1 mm-es magasságra. Amennyiben a fej nem éri el a papírt az abban a sarokban lévő csavaróval addig kell feljebb vinni a fűtőlapot, amíg a papír oldal irányú mozgatás esetén egy enyhe ellenállást mutat. Ezt el kell végezni mindegyik oldalon, majd a közepén. Amennyiben a közepén nincs jó magasságban, akkor mind a 4 csavarót ugyan annyi távolságnban kell eltekerni.</dd>
+                        <dt>Ragasztás</dt>
+                        <dd>A tapadás az egyik legfontosabb része a nyomtatásnak. Ha nem tudunk egy biztonságos első réteget nyomtatni, akkor a többit sem tudjuk mire nyomtatni. A leggyakoribb probléma, ha az első rétegünk nem tapad a fűtőlapra, az a lapon felgyülemlett por, esetleg az ujjunkról rátapadó zsír szokott lenni, ilyenkor csak egyszerűen el kell távolíani a lapot, és szappanos vízzel meg kell mosni. Amennyiben ez sem oldja meg a probláémát, az a filamnt tárolásával kapcsolatos probléma lehet. Ha nem tároljuk vákumosan elzárt csomagolásban, akkor sok nedvességet tud a filament magába szívni a levegőből, és nyomtatáskor kevésbé fog tapadni. Ilyenkor egy megoldás lehet pár percig berakni a sütőbe alacsony hőmérsékleten kb 40-50°C. Ha ez sem segített a problémán, akkor mesterségesen készíthetünk egy ragacsos felületet a lap felületén. Ehez egy tubusos ragasztóra lesz szükségünk, a fűtőlapot felmelegítjük 100°C-ra és alaposan bekenjük a lap felületét. Ez a legközelebbi melegítésnél enyhén megolvad és könnyebben tapad túle a filament a laphoz.</dd>
+                        <dt></dt>
+                        <dd></dd>
+                        <h3>Digitális</h3>
+                        <dt>Slicer softver választás</dt>
+                        <dd>Az STL fileok feldolgozása egy slicer programban végződik. Itt kell beállítani a nyomtatási beállításokat és a nyomtató típusát.</dd>
+                        <dt>Beállítások változtatása</dt>
+                        <dd>Előfordulhat, hogy az adott műanyag alapértelmezett beállításai nem teljesen alkalmasak az ön filamentjéhez. Ilyenkor érdemes maga a márka weboldalára felmenni vagy valamilyen online közösségi oldalra, ahol tapasztalt emberek válaszolni tudnak nekünk. </dd>
+                    </dl>
+                </section>
+        </main>        
+    </div>
+
+    <!-- Lábléc -->
+    <footer>
+        <p>© 2025 Minden jog fenntartva | Készítette: Losonczi Dominik HZ60V1</p>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">Vissza a tetejére</button>
+
+    <!-- Scriptek -->
+    <script>
+        $(document).ready(function() {
+
+            if (localStorage.getItem("themeBody") === "dark") {
+                $("body").addClass("dark");
+            } else {
+                $("body").addClass("light");
+            }
+            if (localStorage.getItem("themeAside") === "dGray") {
+                $("aside").addClass("dGray");
+            } else {
+                $("aside").addClass("lGray");
+            }
+            if (localStorage.getItem("themeA") === "dGray") {
+                $("aside a").addClass("dGray");
+            } else {
+                $("aside a").addClass("lGray");
+            }
+
+        
+            $("#themeToggle").click(function() {
+            $("body").toggleClass("dark");
+            $("body").toggleClass("light");
+            $("aside a").toggleClass("dGray");
+            $("aside a").toggleClass("lGray");
+            $("aside").toggleClass("dGray");
+            $("aside").toggleClass("lGray");
+
+            if ($("body").hasClass("dark")) {
+                localStorage.setItem("themeBody", "dark");
+            } else {
+                localStorage.setItem("themeBody", "light");
+            }
+            if ($("aside").hasClass("dGray")) {
+                localStorage.setItem("themeAside", "dGray");
+            } else {
+                localStorage.setItem("themeAside", "lGray");
+            }
+            if ($("aside a").hasClass("dGray")) {
+                localStorage.setItem("themeA", "dGray");
+            } else {
+                localStorage.setItem("themeA", "lGray");
+            }
+
+
+        });
+    });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+
+            $(window).on("scroll", function () {
+                if ($(this).scrollTop() > 200) {
+                    $("#backToTop").fadeIn();
+                } else {
+                    $("#backToTop").fadeOut();
+                }
+            });
+
+            $("#backToTop").on("click", function () {
+                $("html, body").animate({ scrollTop: 0 }, 500);
+                return false;
+            });
+
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+
+            $.getJSON("filament.json", function(data) {
+
+                let rows = "";
+
+                data.filamentek.forEach(f => {
+                    rows += `
+                        <tr>
+                            <td>${f.tipus}</td>
+                            <td>${f.ho}</td>
+                            <td>${f.elony}</td>
+                            <td>${f.hatrany}</td>
+                        </tr>
+                    `;
+                });
+
+                $("#filamentTable tbody").html(rows);
+
+            });
+
+        });
+    </script>
+
+</body>
+</html>

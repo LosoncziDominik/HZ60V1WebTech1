@@ -1,0 +1,192 @@
+body {
+    font-family: "Segoe UI", sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    
+}
+
+.light {
+    background: white;
+    color: black;
+}
+
+.dark {
+    background: #212121;
+    color: #e0e0e0;
+}
+
+.lGray{
+    background-color: lightgray;
+}
+
+.dGray{
+    background-color: #333333;
+    color: lightgray;
+}
+
+.dark td, .dark th, .dark tr, .dark td:first-child{
+    border: 1px solid white;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 999px;
+    background: #00bcd4;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    display: none;
+    z-index: 999;
+}
+
+.back-to-top:hover {
+    transform: scale(1.05);
+}
+
+.dark .back-to-top {
+    background: #4caf50;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    padding: 1em 2em;
+}
+
+.icon{
+    width: 30px;
+    height: 30px;
+}
+
+.kozep{
+    text-align: center;
+}
+
+.img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50%;
+    height: auto;
+}a
+
+.logo {
+    color: #fff;
+}
+
+.nav-links {
+    list-style: none;
+    display:flex;
+    gap: 3em;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00bcd4;
+}
+
+a{
+    text-decoration: none;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(to right, #00bcd4, #4caf50);
+    color: white;
+}
+
+button {
+    background: #fff;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+table{
+    table-layout: fixed;
+    width: 400px;
+    height: 300px;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+td{
+    border: 1px solid black;
+    width: 200px;
+    height: 100px;
+    overflow: hidden;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+th{
+    border: 1px solid black;
+    width: 200px;
+    height: 50px;
+}
+
+td:first-child{
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+#filamentTable td{
+    text-align: center;
+}
+
+aside {
+  flex: 1;
+  background-color: lightgray;
+  padding: 1em;
+  border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    background: #222;
+    color: white;
+    padding: 20px 0;
+}
+
+.container {
+  display: flex;
+  gap: 2em;
+  margin: 20px;
+}
+
+main{
+    flex: 3;
+}
+
+
+@media (max-width: 600px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+}
