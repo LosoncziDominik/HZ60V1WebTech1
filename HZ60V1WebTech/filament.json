@@ -1,60 +1,60 @@
 {
-    "filamentek": [
+    "filaments": [
         {
-            "tipus": "PLA",
-            "ho": "190-210°C",
-            "elony": "Könnyű nyomtatni, környezetbarát, jó részletesség",
-            "hatrany": "Alacsony hőállóság, törékeny",
-            "ar": "~10.000 ft / kg"
+            "type": "PLA",
+            "heat": "190-210°C",
+            "pro": "Könnyű nyomtatni, környezetbvalueát, jó részletesség",
+            "con": "Alacsony hőállóság, törékeny",
+            "value": "~10.000 ft / kg"
         },
         {
-            "tipus": "ABS",
-            "ho": "230-250°C",
-            "elony": "Erős, tartós, hőálló",
-            "hatrany": "Sok gőz, warping, fűtött kamra ajánlott",
-            "ar": "'15.000 ft / kg"
+            "type": "ABS",
+            "heat": "230-250°C",
+            "pro": "Erős, tvaluetós, hőálló",
+            "con": "Sok gőz, wvalueping, fűtött kamra ajánlott",
+            "value": "~15.000 ft / kg"
         },
         {
-            "tipus": "PETG",
-            "ho": "220-240°C",
-            "elony": "Erős, rugalmas, jó tapadás, tartós",
-            "hatrany": "Stringing, lassabb nyomtatás",
-            "ar": "~13.000 ft / kg"
+            "type": "PETG",
+            "heat": "220-240°C",
+            "pro": "Erős, rugalmas, jó tapadás, tvaluetós",
+            "con": "Stringing, lassabb nyomtatás",
+            "value": "~13.000 ft / kg"
         },
         {
-            "tipus": "TPU",
-            "ho": "220-240°C",
-            "elony": "Rugalmas, hajlékony, ütésálló",
-            "hatrany": "Nehéz nyomtatni, lassú sebesség kell",
-            "ar": "~15.000 ft / kg"
+            "type": "TPU",
+            "heat": "220-240°C",
+            "pro": "Rugalmas, hajlékony, ütésálló",
+            "con": "Nehéz nyomtatni, lassú sebesség kell",
+            "value": "~15.000 ft / kg"
         },
         {
-            "tipus": "Nylon",
-            "ho": "240-260°C",
-            "elony": "Nagyon erős, kopásálló, tartós",
-            "hatrany": "Nehéz nyomtatni, magas hő, nedvszívó",
-            "ar": "20.000 ft / kg"
+            "type": "Nylon",
+            "heat": "240-260°C",
+            "pro": "Nagyon erős, kopásálló, tvaluetós",
+            "con": "Nehéz nyomtatni, magas hő, nedvszívó",
+            "value": "~20.000 ft / kg"
         },
         {
-            "tipus": "Carbon Fiber PLA",
-            "ho": "200-220°C",
-            "elony": "Könnyű, merev, alacsony vetemedés",
-            "hatrany": "Koptatja a nozzle-t, edzett acél fej ajánlott",
-            "ar": "~40.000 ft / kg"
+            "type": "Cvaluebon Fiber PLA",
+            "heat": "200-220°C",
+            "pro": "Könnyű, merev, alacsony vetemedés",
+            "con": "Koptatja a nozzle-t, edzett acél fej ajánlott",
+            "value": "~40.000 ft / kg"
         },
         {
-            "tipus": "Metalic PLA",
-            "ho": "170-190°C",
-            "elony": "csiszolás után nem lehet megkülönböztetni az igazi fémtől, mágneses",
-            "hatrany": "Koptatja a nozzle-t, hatásán kívül nem örököl semilyen tulajdonságot",
-            "ar": "~15.000 ft / kg"
+            "type": "Metalic PLA",
+            "heat": "170-190°C",
+            "pro": "csiszolás után nem lehet megkülönböztetni az igazi fémtől, mágneses",
+            "con": "Koptatja a nozzle-t, hatásán kívül nem örököl semilyen tulajdonságot",
+            "value": "~15.000 ft / kg"
         },
         {
-            "tipus": "Wood PLA",
-            "ho": "160-180°C",
-            "elony": "vágható, csiszolható, sok típusban elérhető",
-            "hatrany": "fa tartalma miatt megéghet, nem tűri az időjárás viszonyokat",
-            "ar": "~15.000 ft / kg"
+            "type": "Wood PLA",
+            "heat": "160-180°C",
+            "pro": "vágható, csiszolható, sok típusban elérhető",
+            "con": "fa tvaluetalma miatt megéghet, nem tűri az időjárás viszonyokat",
+            "value": "~15.000 ft / kg"
         }
     ]
 }

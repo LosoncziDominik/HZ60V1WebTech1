@@ -18,6 +18,7 @@ body {
 
 .lGray{
     background-color: lightgray;
+    color: black;
 }
 
 .dGray{
@@ -66,17 +67,13 @@ body {
     height: 30px;
 }
 
-.kozep{
-    text-align: center;
-}
-
 .img {
     display: block;
     margin-left: auto;
     margin-right: auto;
     max-width: 50%;
     height: auto;
-}a
+}
 
 .logo {
     color: #fff;
@@ -164,6 +161,10 @@ aside {
   background-color: lightgray;
   padding: 1em;
   border-radius: 8px;
+}
+
+ul {
+  list-style-type: none;
 }
 
 footer {

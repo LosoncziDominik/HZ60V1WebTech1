@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kezdő_hibák</title>
+    <title>Beginner_mistakes</title>
     <link rel="stylesheet" href="text.css">
     <link rel="stylesheet" href="videoStyle.css">
     <script src="https://unpkg.com/lucide@0.470.0/dist/umd/lucide.min.js"></script>
@@ -13,10 +13,10 @@
     <header>
         <nav class="navbar">
             
-            <a href="weblap.html"><h1 class="logo"><img class="icon" src="assets/file-box.png"> 3D nyomtatás</h1></a>
+            <a href="webpage.html"><h1 class="logo"><img class="icon" src="assets/file-box.png"> 3D nyomtatás</h1></a>
             <!-- A többi html oldal-->
             <ul class="nav-links">
-                <li><a href="weblap.html">Kezdőlap</a></li>
+                <li><a href="webpage.html">Kezdőlap</a></li>
                 <li><a href="filament.html">Filamentek</a></li>
                 <li><a href="troubleshoot.html">Kezdő hibák</a></li>
                 <li><a href="usage.html">Valós felhasználás</a></li>
@@ -32,22 +32,22 @@
         <!-- Sidebar az oldalon való könnyebb mozgáshoz-->
         <aside class="lGray">
                 <ul>
-                    <li><a href="#Nyomtato_hibas_szintezese">Nyomtató hibás szintezése</a></li>
-                    <li><a href="#Filament_tarolas">Filament tárolás</a></li>
-                    <li><a href="#Tamasz_elem">Támasz elem</a></li>
-                    <li><a href="#Retegzett_nyomtatas">Rétegzett nyomtatás</a></li>
+                    <li><a href="#Printer_bad_leveling">Nyomtató hibás szintezése</a></li>
+                    <li><a href="#Storing_filament">Filament tárolás</a></li>
+                    <li><a href="#Support">Támasz elem</a></li>
+                    <li><a href="#Big_layer_height">Rétegzett nyomtatás</a></li>
                 </ul>
         </aside>
         
         <main>
             <!--Szövegek-->
-            <section id="Nyomtato_hibas_szintezese" class="Nyomtato_hibas_szintezese">
+            <section id="Printer_bad_leveling" class="Printer_bad_leveling">
                 <h2>Nyomtató hibás szintezése</h2>
                 <p>A szintezés a legfontosabb része a 3D nyomtatásnak, amit a fűtőlap alján lévő tekerőkkel lehet beállítani. Ha ez nincs helyesen beállítva, akkor a nyomtatáson kifejezetten meglátszik. Két féle probléma léphet elő ebben a helyzetben, az első az amikor túl közel van a nyomtatófej a fűtőlaphoz, ilyenkor túlságosan összenyomódik a filament és egy "u" alakot vesz fel egy egyenes csík helyett. A másik eshetőség, ha túl messze van a fej a laptól, ekkor nem nyomódik le eléggé a műanyag és vagy "o" alakot vesz fel vagy nem is tapad rá a lapra.</p>
                 <img src="assets/layerheight.png" class="img">
                 <h3>Megoldás:</h3>
                 <p>A megoldás a nyomtató pontos szintezése, amit vagy megcsinál a nyomtató maga, amennyiben van ilyen funkciója, vagy pedig nekünk kell manuálisan elvégezni ennek a megvalósításához az alábbi linken találhat segítséget.</p>
-                <video src="assets/3D_nyomtato_leveling.mp4" id="video" width="600" controls></video>
+                <video src="assets/3D_printer_leveling.mp4" id="video" width="600" controls></video>
                 <div class="grid">
                     <div>
                         <button id="start"><i data-lucide="play"></i></button>
@@ -66,13 +66,13 @@
                     </div>
                 </div>
             </section>
-            <section id="Filament_tarolas" class="Filament_tarolas">    
+            <section id="Storing_filament" class="Storing_filament">    
                 <h2>Filament tárolás</h2>
                 <p>A filament a helytelen tárolása számtalan problémát hordoz magában. A legfontosabb dolog az, hogy vákumosan elzárt, naptól védett helyen tároljuk a filamentet. Ha ezt nem tesszük és például napos helyen tároljuk, akkor az UV sugárzástól sérül a műanyag szerkezete és emiatt törékennyé válik. Ha nem rakjuk lezárt tárolóba, akkor a párát tudja magába szívni az anyag, amitől sokkal kevésbé fog tapadni a fűtőlaphoz. Nagy probléma lehet a por is, mivel ha felhalmozódik a filamenten, akkor ez is képes gátolni a tapadást.</p>
                 <h3>Megoldást:</h3>
                 <p>Vákummentes zacskóban fénytől elzárva kell tárolni, ha huzamosabb ideig nem tervezzük használni.</p>
             </section>
-            <section id="Tamasz_elem" class="Tamasz_elem">
+            <section id="Support" class="Support">
                 <h2>Támasz elem</h2>
                 <p>Gyakran probléma a 3D nyomtatás során, hogy egy hézagot kell áthidalni. Erre a legtöbb műanyag nem elég merev, ezért támasz elemet kell készíteni. Hasonló probléma fordul elő a 45° fölötti emelkedőnél. Ha elképzel egy fejjel lefelé álló piramist, a nyomtatónak minden egyes új külső sort a levegőre kell nyomtatnia, ez aránylag megoldható, mivel a mellette lévő még megfogja, azonban ha több ilyen sor kerül nyomtatásra, akkor minden egyes sorral szignifikánsan nő annak az esélye, hogy nem tapad semmihez, és ez egy láncreakciót okoz, mivel ha erre a nem létező részre szeretne még többször nyomtatni, az szintén nem lesz sikeres nyomtatva.</p>
                 <img src="assets/angle_printing.png" class="img">
@@ -80,7 +80,7 @@
                 <p>A legtöbb slicer program képes automatikusan támasztó elemet készíteni, ha bepipáljuk generáláskor.</p>
                 <img src="assets/support.jpg" class="img">
             </section>
-            <section id="Retegzett_nyomtatas" class="Retegzett_nyomtatas">
+            <section id="Big_layer_height" class="Big_layer_height">
                 <h2>Rétegzett nyomtatás</h2>
                 <p>Ha túlságosan rétegzettek a sorok a nyomtatás után, akkor nagy valószínűleg a rétegmagasság okozhatja a problémát. Ha ezt túl magasra hagyjuk, akkor gyakran nem képes elég részletesen nyomtatni az adott tárgyat.</p>
                 <h3>Megoldás:</h3>
