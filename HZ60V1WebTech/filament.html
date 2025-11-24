@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filamentek</title>
+    <title>Filaments</title>
     <link rel="stylesheet" href="text.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
@@ -11,10 +11,10 @@
     <header>
         <nav class="navbar">
             
-            <a href="weblap.html"><h1 class="logo"><img class="icon" src="assets/file-box.png">3D nyomtatás</h1></a>
+            <a href="webpage.html"><h1 class="logo"><img class="icon" src="assets/file-box.png"> 3D nyomtatás</h1></a>
             <!-- A többi html oldal-->
             <ul class="nav-links">
-                <li><a href="weblap.html">Kezdőlap</a></li>
+                <li><a href="webpage.html">Kezdőlap</a></li>
                 <li><a href="filament.html">Filamentek</a></li>
                 <li><a href="troubleshoot.html">Kezdő hibák</a></li>
                 <li><a href="usage.html">Valós felhasználás</a></li>
@@ -168,13 +168,14 @@
 
                 let rows = "";
 
-                data.filamentek.forEach(f => {
+                data.filaments.forEach(f => {
                     rows += `
                         <tr>
-                            <td>${f.tipus}</td>
-                            <td>${f.ho}</td>
-                            <td>${f.elony}</td>
-                            <td>${f.hatrany}</td>
+                            <td>${f.type}</td>
+                            <td>${f.heat}</td>
+                            <td>${f.pro}</td>
+                            <td>${f.con}</td>
+                            <td>${f.value}</td>
                         </tr>
                     `;
                 });
