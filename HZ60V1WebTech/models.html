@@ -30,9 +30,9 @@
         <!-- Sidebar az oldalon való könnyebb mozgáshoz-->
         <aside class="lGray">
                 <ul>
-                    <li><a href="#Modeller_softwares">Modellezők</a></li>
-                    <li><a href="#Finding_models">Modell keresés</a></li>
-                    <li><a href="#Slicer">Szeletelők</a></li>
+                    <li><button type="button" onclick="scrollToSection('Modeller_softwares')">3D modellező programok</button></li>
+                    <li><button type="button" onclick="scrollToSection('Finding_models')">Modellek szerzése</button></li>
+                    <li><button type="button" onclick="scrollToSection('Slicer')">Szeletelő programok</button></li>
                 </ul>
         </aside>
         
@@ -159,6 +159,15 @@
             });
 
         });
+    </script>
+
+    <script>
+    function scrollToSection(id) {
+        const el = document.getElementById(id);
+        if (el) {
+            el.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
     </script>
 
 </body>

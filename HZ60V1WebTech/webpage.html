@@ -35,11 +35,13 @@
     <div class="container">
         <!-- Sidebar az oldalon való könnyebb mozgáshoz-->
         <aside class="lGray">
+            <nav>
                 <ul>
-                    <li><a href="#about">Rólam</a></li>
-                    <li><a href="#printing">3D nyomtatás</a></li>
-                    <li><a href="#contact">Űrlap</a></li>
+                    <li><button type="button" onclick="scrollToSection('about')">Rólam</button></li>
+                    <li><button type="button" onclick="scrollToSection('printing')">3D nyomtatás</button></li>
+                    <li><button type="button" onclick="scrollToSection('contact')">Űrlap</button></li>
                 </ul>
+            </nav>
         </aside>
         
         <main>
@@ -204,6 +206,15 @@
             });
 
         });
+    </script>
+
+    <script>
+    function scrollToSection(id) {
+        const el = document.getElementById(id);
+        if (el) {
+            el.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
     </script>
     
 

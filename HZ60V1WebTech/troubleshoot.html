@@ -32,10 +32,10 @@
         <!-- Sidebar az oldalon való könnyebb mozgáshoz-->
         <aside class="lGray">
                 <ul>
-                    <li><a href="#Printer_bad_leveling">Nyomtató hibás szintezése</a></li>
-                    <li><a href="#Storing_filament">Filament tárolás</a></li>
-                    <li><a href="#Support">Támasz elem</a></li>
-                    <li><a href="#Big_layer_height">Rétegzett nyomtatás</a></li>
+                    <li><button type="button" onclick="scrollToSection('Printer_bad_leveling')">Nyomtató hibás szintezése</button></li>
+                    <li><button type="button" onclick="scrollToSection('Storing_filament')">Filament tárolás</button></li>
+                    <li><button type="button" onclick="scrollToSection('Support')">Támasz elem</button></li>
+                    <li><button type="button" onclick="scrollToSection('Big_layer_height')">Rétegzett nyomtatás</button></li>
                 </ul>
         </aside>
         
@@ -186,6 +186,15 @@
             });
 
         });
+    </script>
+
+    <script>
+    function scrollToSection(id) {
+        const el = document.getElementById(id);
+        if (el) {
+            el.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
     </script>
 
 </body>

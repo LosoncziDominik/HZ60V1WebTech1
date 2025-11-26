@@ -163,6 +163,30 @@ aside {
   border-radius: 8px;
 }
 
+aside.lGray ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+aside.lGray li {
+    margin-bottom: 0.5rem;
+}
+
+aside.lGray button {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: 1px solid lightgray;
+    background: lightgray;
+    color: black;
+    cursor: pointer;
+}
+
+aside.lGray button:hover {
+    background: #ddd;
+}
+
 ul {
   list-style-type: none;
 }

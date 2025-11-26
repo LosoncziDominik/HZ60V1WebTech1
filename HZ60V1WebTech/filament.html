@@ -30,8 +30,8 @@
         <!-- Sidebar az oldalon való könnyebb mozgáshoz-->
         <aside class="lGray">
                 <ul>
-                    <li><a href="#filament">Filament</a></li>
-                    <li><a href="#printing_tipps">Nyomtatási tippek</a></li>
+                    <li><button type="button" onclick="scrollToSection('filament')">Filament</button></li>
+                    <li><button type="button" onclick="scrollToSection('printing_tipps')">Nyomtatási tippek</button></li>
                 </ul>
         </aside>
         
@@ -59,7 +59,7 @@
                 </tbody>
             </table>
                 <section>
-                    <h2 id="printing_tipps">Nyomtatási tippek</h2>
+                    <h2>Nyomtatási tippek</h2>
                     <dl>
                         <h3>Fizikai</h3>
                         <dt>Szintezés</dt>
@@ -178,6 +178,15 @@
             });
 
         });
+    </script>
+
+     <script>
+    function scrollToSection(id) {
+        const el = document.getElementById(id);
+        if (el) {
+            el.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
     </script>
 
 </body>

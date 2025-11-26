@@ -32,12 +32,12 @@
         <!-- Sidebar az oldalon való könnyebb mozgáshoz-->
         <aside class="lGray">
                 <ul>
-                    <li><a href="#Military_industry">Hadi ipar</a></li>
-                    <li><a href="#Cosplay">Film jelmez készítés</a></li>
-                    <li><a href="#Car_maintenance">Auto szervíz</a></li>
-                    <li><a href="#Building_industry">Építő ipar</a></li>
-                    <li><a href="#Printing_on_an_airship">Űrben 3D nyomtatás</a></li>
-                    <li><a href="#Meat_printing">Hús nyomtatás</a></li>
+                    <li><button type="button" onclick="scrollToSection('Military_industry')">Drón nyomtatás</button></li>
+                    <li><button type="button" onclick="scrollToSection('Cosplay')">Film jelmez nyomtatás</button></li>
+                    <li><button type="button" onclick="scrollToSection('Car_maintenance')">Auto szervíz</button></li>
+                    <li><button type="button" onclick="scrollToSection('Building_industry')">Építő ipar</button></li>
+                    <li><button type="button" onclick="scrollToSection('Printing_on_an_airship')">Űrben 3D nyomtatás</button></li>
+                    <li><button type="button" onclick="scrollToSection('Meat_printing')">Hús nyomtatás</button></li>
                 </ul>
         </aside>
         
@@ -186,6 +186,15 @@
             });
 
         });
+    </script>
+
+    <script>
+    function scrollToSection(id) {
+        const el = document.getElementById(id);
+        if (el) {
+            el.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
     </script>
     
 </body>
