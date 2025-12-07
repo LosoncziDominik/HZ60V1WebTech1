@@ -1,49 +1,48 @@
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Autók JSON</title>
+    <title>Tömbökön belüli tömbök ciklusa</title>
 </head>
 <body>
-    <h1>Tömbökön belüli tömbök ciklusa</h1>
+    
+<h2>Tömbökön belüli tömbök ciklusa</h2>
+<h2><strong>Losonczi Dominik (24)</strong></h2>
 
-    <div id="jsonHZ60V1"></div>
+<div id="jsonHZ60V1"></div>
+<script>
+const TPObj = {
+    "name": "TP",
+    "age": 21,
+    "cars": [
+        {"name":"Toyota", "models":["CHR", "Corolla", "Proace"]},
+        {"name":"Ford", "models":["Kuga", "Mondeo", "Mustang"]},
+        {"name":"BMW", "models":["320", "X3", "X5"]},
+        {"name":"Fiat", "models":["500", "Panda", "Tipo"] }]}    
 
-    <script>
-        const LDObj = {
-            "name": "Losonczi Dominik",
-            "age": 24,
-            "cars": [
-                {"name": "Toyota", "models": ["CHR", "Corolla", "Proace"]},
-                {"name": "Ford", "models": ["Kuga", "Mondeo", "Mustang"]},
-                {"name": "BMW", "models": ["320", "X3", "XS"]},
-                {"name": "Fiat", "models": ["500", "Panda", "Tipo"]}
-            ]
-        };
+    const jsonHZ60V1 = document.getElementById('jsonHZ60V1');
 
-        const jsonDiv = document.getElementById('jsonHZ60V1');
+    const h2 = document.createElement('h2');
+    jsonHZ60V1.appendChild(h2)
 
-        const h2 = document.createElement('h2');
-        h2.textContent = "Autók és modelljeik:";
-        jsonDiv.appendChild(h2);
+    for(let i=0; i < TPObj.cars.length; i++) {
+        const p = document.createElement('p');
+        p.innerHTML = `<strong>${TPObj.cars[i].name}</strong>`;
+        jsonHZ60V1.appendChild(p);
 
-        for (let i = 0; i < LDObj.cars.length; i++) {
+        const ul = document.createElement('ul');
 
-            const p = document.createElement('p');
-            p.innerHTML = `<strong>${LDObj.cars[i].name}</strong>`;
-            jsonDiv.appendChild(p);
-
-            const ul = document.createElement('ul');
-            
-            for (let j = 0; j < LDObj.cars[i].models.length; j++) {
-                const li = document.createElement('li');
-                li.textContent = LDObj.cars[i].models[j];
-                ul.appendChild(li);
-            }
-
-            jsonDiv.appendChild(ul);
+        for(let j=0; j < TPObj.cars[i].models.length; j++){
+            const li = document.createElement('li');
+            li.textContent = TPObj.cars[i].models[j];
+            ul.appendChild(li);
         }
-    </script>
+
+            jsonHZ60V1.appendChild(ul);
+    }
+
+</script>
+
 </body>
 </html>

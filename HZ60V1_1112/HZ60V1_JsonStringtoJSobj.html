@@ -1,35 +1,31 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JSON file feldolgozás, beolvasás - Javascript-ben</title>
+<meta charset="UTF-8">
+<title>JS objektum</title>
 </head>
 <body>
-    <h1>JSON file feldolgozás, beolvasás - Javascript-ben</h1>
 
-    <p id="neptunkod"></p>
+<h3>JSON String konvertálása JS objektummá</h3>
 
-    <button onclick="olvass()">JSON olvasás</button>
-    
+<p id="HZ60V1"></p>
 
-    <script>
-        function olvass(){
-            const JSONdate= '[{"nev":"HTML5","kiterjesztes":".html"},{"nev":"CSS3","kiterjesztes":".css"},{"nev":"JavaScript","kiterjesztes":".js"}]'
+<button onclick="beolvas()">Beolvasás</button>
 
-            const obj = JSON.parse(JSONdate);
+<script>
+function beolvas() {
+    const jsonString =
+        '{"nev":"Nagy János", "iranyitoszam":"2515", "varos":"Miskolc", "egyetem":"Miskolci Egyetem"}';
 
-            let i=0;
-            let szovegKiir="";
+    const obj = JSON.parse(jsonString);
 
-            while(i <3){
-                szovegKiir += "Név: " + obj[i].nev + ", kiterjesztes" + obj[i].kiterjesztes + "<br>";
-                i++;
-            }
-
-            document.getElementById("neptunkod").innerHTML = szovegKiir;
-        }
-    </script>
+    document.getElementById("HZ60V1").innerHTML =
+        "Egyetem: " + obj.egyetem + "<br>" +
+        "Város: " + obj.varos + "<br>" +
+        "Irányítószám: " + obj.iranyitoszam + "<br>" +
+        "Név: " + obj.nev + "<br>";
+}
+</script>
 
 </body>
 </html>

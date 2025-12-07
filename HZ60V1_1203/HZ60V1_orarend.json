@@ -1,141 +1,95 @@
 {
-    "HZ60V1_orarend":{
-        "ora": [
+    "HZ60V1_orarend": {
+        "cim": "Miskolci Egyetem, 3515 Miskolc-Egyetemváros",
+        "iranyitoszam": 3515,
+        "varos": "Miskolc",
+        "utca": "Egyetemváros",
+        "telefonszam": {
+            "tipus": "Vezetékes",
+            "szam": "0646 555-125"
+        },
+        "mobil": {
+            "tipus": "Mobil",
+            "szam": "0670 555-4567"
+        },
+        "kurzus": [
             {
-                "targy": "Szamitogep halozatok",
-                "idopont":{
-                    "nap": "Hetfo",
-                    "tol": "8",
-                    "ig": "10"
-                },
-                "helyszin": "E1",
-                "oktato": "Dr. Kovacs Szilveszter Dezso",
-                "szak": "Programtervezo informatokus BSC"
+                "targy": "Web technológiák 1",
+                "idopont": { "nap": "Hétfő", "tol": 10, "ig": 12 },
+                "helyszin": "A1 magasfsz V.ea.",
+                "oktato": "Agrádi Anita",
+                "szak": "Programtervező Informatikus"
             },
             {
-                "targy": "Web technologia 1.",
-                "idopont":{
-                    "nap": "Hetfo",
-                    "tol": "10",
-                    "ig": "12"
-                },
-                "helyszin": "E5",
-                "oktato": "Dr. Agradi Anita",
-                "szak": "Programtervezo informatokus BSC"
+                "targy": "Műszaki Angol",
+                "idopont": { "nap": "Hétfő", "tol": 12, "ig": 14 },
+                "helyszin": "A1/316 III.ea.",
+                "oktato": "Pataki Jánosné",
+                "szak": "Programtervező Informatikus"
             },
             {
-                "targy": "Mesterséges intelligencia alapok",
-                "idopont":{
-                    "nap": "Kedd",
-                    "tol": "10",
-                    "ig": "12"
-                },
-                "helyszin": "E32",
-                "oktato": "Kunne Dr. Tamas Judit",
-                "szak": "Programtervezo informatokus BSC"
+                "targy": "Mesterséges Intelligencia alapjai",
+                "idopont": { "nap": "Kedd", "tol": 10, "ig": 12 },
+                "helyszin": "A1 XXXII.ea.",
+                "oktato": "Kunné Dr. Tamás Judit",
+                "szak": "Programtervező Informatikus"
             },
             {
-                "targy": "Algoritmusok es vizsgalatuk",
-                "idopont":{
-                    "nap": "Kedd",
-                    "tol": "14",
-                    "ig": "16"
-                },
-                "helyszin": "E30",
-                "oktato": "Dr. Hazy Attila",
-                "szak": "Programtervezo informatokus BSC"
+                "targy": "Mesterséges Intelligencia alapjai",
+                "idopont": { "nap": "Kedd", "tol": 12, "ig": 14 },
+                "helyszin": "A1 XXXII.ea.",
+                "oktato": "Fazekas Levente",
+                "szak": "Programtervező Informatikus"
             },
             {
-                "targy": "Webes adatkezelo kornyezetek",
-                "idopont":{
-                    "nap": "Szerda",
-                    "tol": "10",
-                    "ig": "12"
-                },
-                "helyszin": "In 103",
-                "oktato": "Dr. Bednarik Laszlo",
-                "szak": "Programtervezo informatokus BSC"
+                "targy": "Algoritmusok és vizsgálatuk",
+                "idopont": { "nap": "Kedd", "tol": 14, "ig": 16 },
+                "helyszin": "A1/305 XXX.ea.",
+                "oktato": "Dr. Házy Attila",
+                "szak": "Programtervező Informatikus"
             },
             {
-                "targy": "Mesterséges intelligencia alapok",
-                "idopont":{
-                    "nap": "Kedd",
-                    "tol": "12",
-                    "ig": "14"
-                },
-                "helyszin": "E32",
-                "oktato": "Kunne Dr. Tamas Judit",
-                "szak": "Programtervezo informatokus BSC"
+                "targy": "Algoritmusok és vizsgálatuk",
+                "idopont": { "nap": "Kedd", "tol": 16, "ig": 18 },
+                "helyszin": "A1/305 XXX.ea.",
+                "oktato": "Dr. Házy Attila",
+                "szak": "Programtervező Informatikus"
             },
             {
-                "targy": "Vallalati informacios rendszerek fejlesztése",
-                "idopont":{
-                    "nap": "Szerda",
-                    "tol": "14",
-                    "ig": "16"
-                },
-                "helyszin": "In 103",
-                "oktato": "Dr. Sasvari Peter",
-                "szak": "Programtervezo informatokus BSC"
+                "targy": "Webes adatkezelő környezetek",
+                "idopont": { "nap": "Szerda", "tol": 8, "ig": 10 },
+                "helyszin": "A1/310",
+                "oktato": "Dr. Kovács László József",
+                "szak": "Programtervező Informatikus"
             },
             {
-                "targy": "Vallalati informacios rendszerek fejlesztése",
-                "idopont":{
-                    "nap": "Szerda",
-                    "tol": "18",
-                    "ig": "20"
-                },
-                "helyszin": "In 103",
-                "oktato": "Dr. Sasvari Peter",
-                "szak": "Programtervezo informatokus BSC"
+                "targy": "Webes adatkezelő környezetek",
+                "idopont": { "nap": "Szerda", "tol": 10, "ig": 12 },
+                "helyszin": "Inf103",
+                "oktato": "Dr. Bednárik László",
+                "szak": "Programtervező Informatikus"
             },
             {
-                "targy": "Szamitogep halozatok",
-                "idopont":{
-                    "nap": "Csutortok",
-                    "tol": "10",
-                    "ig": "12"
-                },
-                "helyszin": "E1",
-                "oktato": "Dr. Kovacs Szilveszter Dezso",
-                "szak": "Programtervezo informatokus BSC"
+                "targy": "Web Technologiák",
+                "idopont": { "nap": "Szerda", "tol": 12, "ig": 14 },
+                "helyszin": "Inf101",
+                "oktato": "Dr. Bednárik László",
+                "szak": "Programtervező Informatikus"
             },
             {
-                "targy": "Algoritmusok es vizsgalatuk",
-                "idopont":{
-                    "nap": "Szerda",
-                    "tol": "16",
-                    "ig": "18"
-                },
-                "helyszin": "E30",
-                "oktato": "Dr. Hazy Attila",
-                "szak": "Programtervezo informatokus BSC"
+                "targy": "Vállalati információs rendszerek",
+                "idopont": { "nap": "Szerda", "tol": 14, "ig": 16 },
+                "helyszin": "Inf101",
+                "oktato": "Dr. Sasvári Péter",
+                "szak": "Programtervező Informatikus"
             },
             {
-                "targy": "Webes adatkezelo kornyezetek",
-                "idopont":{
-                    "nap": "Szerda",
-                    "tol": "8",
-                    "ig": "10"
-                },
-                "helyszin": "E31",
-                "oktato": "Prof. Dr. Kovacs Laszlo",
-                "szak": "Programtervezo informatokus BSC"
-            },
-            {
-                "targy": "Web technologia 1.",
-                "idopont":{
-                    "nap": "Szerda",
-                    "tol": "12",
-                    "ig": "14"
-                },
-                "helyszin": "In 101",
-                "oktato": "Dr. Bednarik Laszlo",
-                "szak": "Programtervezo informatokus BSC"
+                "targy": "Vállalati információs rendszerek",
+                "idopont": { "nap": "Szerda", "tol": 18, "ig": 20 },
+                "helyszin": "Inf101",
+                "oktato": "Dr. Sasvári Péter",
+                "szak": "Programtervező Informatikus"
             }
-
-
-            
         ]
     }
 }

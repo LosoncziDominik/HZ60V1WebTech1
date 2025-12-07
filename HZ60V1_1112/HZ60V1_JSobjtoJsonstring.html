@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<title>JS objektumot konvertálása</title>
+</head>
+<body>
+
+<h3>JS objektum - JSON String</h3>
+
+<p id="HZ60V1"></p>
+
+<button onclick="general()">JSON generálás</button>
+
+<script>
+function general() {
+
+    const obj = {
+        nev: "Nagy János",
+        iranyitoszam: "2515",
+        varos: "Miskolc",
+        egyetem: "Miskolci Egyetem"
+    };
+
+    const jsonString = JSON.stringify(obj);
+
+    document.getElementById("HZ60V1").innerHTML = jsonString;
+}
+</script>
+
+</body>
+</html>

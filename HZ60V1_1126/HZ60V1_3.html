@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A24E5Z_3</title>
+    <title>HZ60V1_3</title>
     <style>
         .infoBox {
-            display: none;
-            position: absolute;
-            padding: 10px;
-            background: #333;
-            color: #fff;
-            border-radius: 4px;
-            font-size: 14px;
-            }
+    display: none;
+    position: absolute;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 14px;
+    }
 
     input, button {
         margin-top: 1rem;
@@ -43,18 +43,28 @@
     <input type="password", id="pass" name="pass"> <br>
 
     
-    <button id="myButton">Jelentkezés</button>
+    <button id="myButton" >Jelentkezés</button>
 
     <script>
+        // 1 kattintás → eltűnik
         $(".click1").click(function() {
             $(this).closest("p").hide();
         });
 
+        // 2 kattintás → eltűnik
         $(".click2").dblclick(function() {
             $(this).closest("p").hide();
         });
 
-        $("#myButton").mouseenter(function() {  })
+        $("#myButton").hover(function(e) {
+            $("#infoBox")
+                .text("Ide kattintva tudsz jelentkezni a képzésre!")
+                .css({ top: e.pageY + 15, left: e.pageX + 15 })
+                .stop(true,true)
+                .fadeIn(200);
+        }, function() {
+            $("#infoBox").fadeOut(200);
+        });
 
         $(document).ready(function () {
     $("#fejlec").on("mouseenter", function (event) {
