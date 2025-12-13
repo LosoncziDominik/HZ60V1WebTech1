@@ -184,7 +184,31 @@ aside.lGray button {
 }
 
 aside.lGray button:hover {
-    background: #ddd;
+    background: #fefefe;
+}
+
+aside.dGray ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+aside.dGray li {
+    margin-bottom: 0.5rem;
+}
+
+aside.dGray button {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: 1px solid #333333;
+    background: #333333;
+    color: lightgray;
+    cursor: pointer;
+}
+
+aside.dGray button:hover {
+    background: #2d2d2d;
 }
 
 ul {

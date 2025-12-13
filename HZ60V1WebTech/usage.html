@@ -9,7 +9,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://unpkg.com/lucide@0.470.0/dist/umd/lucide.min.js"></script>
 </head>
-<body class="light">
+<body class="">
     <header>
         <nav class="navbar">
             
@@ -30,7 +30,7 @@
     <!-- Tartalom -->
     <div class="container">
         <!-- Sidebar az oldalon való könnyebb mozgáshoz-->
-        <aside class="lGray">
+        <aside class="">
                 <ul>
                     <li><button type="button" onclick="scrollToSection('Military_industry')">Drón nyomtatás</button></li>
                     <li><button type="button" onclick="scrollToSection('Cosplay')">Film jelmez nyomtatás</button></li>
@@ -133,18 +133,10 @@
             } else {
                 $("aside").addClass("lGray");
             }
-            if (localStorage.getItem("themeA") === "dGray") {
-                $("aside a").addClass("dGray");
-            } else {
-                $("aside a").addClass("lGray");
-            }
-
         
             $("#themeToggle").click(function() {
             $("body").toggleClass("dark");
             $("body").toggleClass("light");
-            $("aside a").toggleClass("dGray");
-            $("aside a").toggleClass("lGray");
             $("aside").toggleClass("dGray");
             $("aside").toggleClass("lGray");
 
@@ -158,13 +150,6 @@
             } else {
                 localStorage.setItem("themeAside", "lGray");
             }
-            if ($("aside a").hasClass("dGray")) {
-                localStorage.setItem("themeA", "dGray");
-            } else {
-                localStorage.setItem("themeA", "lGray");
-            }
-
-
         });
     });
     </script>

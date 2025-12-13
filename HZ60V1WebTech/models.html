@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="text.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
-<body class="light">
+<body class="">
     <header>
         <nav class="navbar">
             
@@ -28,7 +28,7 @@
     <!-- Tartalom -->
     <div class="container">
         <!-- Sidebar az oldalon való könnyebb mozgáshoz-->
-        <aside class="lGray">
+        <aside class="">
                 <ul>
                     <li><button type="button" onclick="scrollToSection('Modeller_softwares')">3D modellező programok</button></li>
                     <li><button type="button" onclick="scrollToSection('Finding_models')">Modellek szerzése</button></li>
@@ -106,18 +106,10 @@
             } else {
                 $("aside").addClass("lGray");
             }
-            if (localStorage.getItem("themeA") === "dGray") {
-                $("aside a").addClass("dGray");
-            } else {
-                $("aside a").addClass("lGray");
-            }
 
-        
             $("#themeToggle").click(function() {
             $("body").toggleClass("dark");
             $("body").toggleClass("light");
-            $("aside a").toggleClass("dGray");
-            $("aside a").toggleClass("lGray");
             $("aside").toggleClass("dGray");
             $("aside").toggleClass("lGray");
 
@@ -131,12 +123,6 @@
             } else {
                 localStorage.setItem("themeAside", "lGray");
             }
-            if ($("aside a").hasClass("dGray")) {
-                localStorage.setItem("themeA", "dGray");
-            } else {
-                localStorage.setItem("themeA", "lGray");
-            }
-
 
         });
     });
